@@ -5,6 +5,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   test:
@@ -33,8 +34,8 @@ jobs:
         run: npm run test:migrations
 
       # COVERAGE makes the server suite collect coverage inside this run rather
-      # than running the whole suite a second time. Only the Node 22 leg sets
-      # it, so the Node 20 leg keeps uninstrumented timings. Reporting only,
+      # than running the whole suite a second time. Only the Node 22 leg sets it,
+      # so the Node 20 leg keeps uninstrumented timings. Reporting only,
       # there are no thresholds and coverage never fails the build.
       - name: Run tests
         env:
