@@ -1,4 +1,5 @@
 name: CI
+# Runs automatically on pushes and pull requests; manual runs are also enabled.
 
 on:
   push:
